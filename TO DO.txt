@@ -4,3 +4,4 @@ Portfolio to-do list:
 - Fix "Web Developer" in the title not being affected by its "flavor" class
 - Make the website remember your dark/light mode preference
 - Make website more responsive as to work on mobile devices
+- Fix the big buttons under "Projects" not being centered on the page (and make them collapse into a 2x2 on mobile)
