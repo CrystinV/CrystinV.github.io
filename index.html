@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <title>Crystin's Portfolio Website</title>
+        <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script src="script.js"></script>
+        <!-- hide extra elements on small devices -->
+        <style>
+        @media (min-width: 100px) {
+            .logo {
+                display: none;
+            }
+        }
+        @media (min-width: 1292px){
+            .logo {
+                display: block;
+            }
+        }
+        </style>
+    </head>
+
+    <body>
+        <!-- dark mode switch -->
+        <label class="darkmode-switch">
+            <input type="checkbox" onclick="toggleDark()">
+            <span class="slider round"></span>
+        </label>
+        <!-- navigation bar -->
+        <nav class="navbar">
+            <div class="max-width">
+                <div class="logo">
+                    <h4>Portfolio</h4>
+                </div>
+                <ul class="menu">
+                    <a href="#home"><li><button class="btn">Home</button></li></a>
+                    <a href="#about"><li><button class="btn">About</button></li></a>
+                    <a href="#skills"><li><button class="btn">Skills</button></li></a>
+                    <a href="#projects"><li><button class="btn">Projects</button></li></a>
+                    <a href="#services"><li><button class="btn">Services</button></li></a>
+                    <a href="#"><li><button class="btn" id="hamburger"><i class="fa fa-bars"></i></button></li></a>
+                </ul>
+                </div>
+            </div>
+        </nav>
+
+            <!-- home section -->
+            <section class="home" id="home">
+                <div class="max-width">
+                    <div class="home-content">
+                        <div class="text-1">Hello, my name is</div>
+                        <div class="text-2">Crystin Vazquez.</div>
+                        <div class="text-3">I am a <span class="flavor">Web Developer</span></div>
+                    </div>
+                </div>
+            </section> <hr>
+            
+            <!-- about section -->
+            <section class="content" id="about">
+                <div>
+                    <h1 class="title flavor">About me<br></h1>   
+                    <div>
+                        <div style="height: 300px; width: 300px; object-fit: cover; position: absolute; vertical-align: center;">
+                            <img src="media/profilephoto.jpg" alt="Profile photo" class="left-column" style="max-height: 400px; max-width: 400px; transform: translate(0, -40%) translateY(60%); min-height: 300px; min-width: 300px;">
+                        </div>
+                        <p class="right-column">
+                            Hi, my name is Crystin,<br><br>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consequatur sint architecto, modi, neque nesciunt dolore et ullam vero nostrum ad, expedita commodi corrupti quis. Expedita ratione facilis inventore deserunt porro.
+                        </p>
+                    </div>
+                </div>
+            </section> <hr>
+
+            <!-- skills section -->
+            <section class="content" id="skills">
+                    <h1 class="title flavor">My Skills</h1>
+                    <div class="left-column">
+                        <h2>My skills and experience</h2>
+                        <p>
+                            <br>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officia tempora reprehenderit, saepe aut obcaecati id porro veritatis inventore dolorum? Illum perferendis earum accusantium explicabo magni sunt optio dolores, vitae veritatis.
+                        </p>
+                    </div>
+                    <div class="right-column">
+                        <div class="bars">
+                            <div class="info">
+                                <span>HTML</span>
+                                <span>90%</span>
+                            </div>
+                            <div class="line html"></div>
+                            <div class="info">
+                                <span>CSS</span>
+                                <span>70%</span>
+                            </div>
+                            <div class="line css"></div>
+                            <div class="info">
+                                <span>JavaScript</span>
+                                <span>40%</span>
+                            </div>
+                            <div class="line javascript"></div>
+                        </div>
+                    </div>
+            </section> <hr>
+
+            <!-- projects section -->
+            <section class="content" id="projects">
+                <div>
+                    <h1 class="title flavor">My Projects</h1>
+                </div>
+                <div class="project-display">
+                    <a><button class="large-btn" id="project1"></button></a>
+                    <a><button class="large-btn" id="project2"></button></a>
+                    <a><button class="large-btn" id="project3"></button></a>
+                    <a><button class="large-btn" id="project4"></button></a>
+                </div>
+            </section> <hr>
+
+            <!-- services section -->
+            <section class="content" id="services">
+                <div>
+                    <h1 class="title flavor">My Services</h1>
+                </div>
+            </section>
+
+            <!-- contact section -->
+            <section class="contact">
+                <a href="contact.html" class="email">
+                    <button class="btn"><i class="fa fa-envelope"></i> Contact me</button>
+                </a>
+            </section>
+    </body>
+</html>
