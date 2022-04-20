@@ -4,21 +4,17 @@
     height: 70vh;
     display: flex;
     flex-wrap: wrap;
-    background-color: gray;
+    background-color: rgba(15, 141, 141, 0.5);
     position: absolute;
     top: 15vh;
-    left: 10vw;
 }
 
 .grid div {
     height: 7vh;
     width: 7vh;
+    color: white;
 }
 
 .checked {
     background-color: darkslategray;
-}
-
-.bomb {
-    background-color: orange;
 }
