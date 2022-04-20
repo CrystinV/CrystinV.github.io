@@ -1,0 +1,23 @@
+.grid {
+    width: 70vh;
+    height: 70vh;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: gray;
+    position: absolute;
+    top: 15vh;
+    left: 10vw;
+}
+
+.grid div {
+    height: 7vh;
+    width: 7vh;
+}
+
+.checked {
+    background-color: darkslategray;
+}
+
+.bomb {
+    background-color: orange;
+}

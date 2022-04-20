@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="projects/projectstyles.css">
+    <title>Project - Minesweeper</title>
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="script.js"></script>
+    <script src="projects/minesweeper.js"></script>
+</head>
+<body class="home">
+    
+<!-- dark mode switch -->
+<label class="darkmode-switch">
+    <input type="checkbox" onclick="toggleDark()">
+    <span class="slider round"></span>
+</label>
+
+<!-- navigation bar -->
+<nav class="navbar">
+    <div class="max-width">
+        <div class="logo">
+            <h4>Portfolio</h4>
+        </div>
+        <ul class="menu">
+            <a href="index.html"><li><button class="btn">Home</button></li></a>
+            <a href="index.html #about"><li><button class="btn">About</button></li></a>
+            <a href="index.html #skills"><li><button class="btn">Skills</button></li></a>
+            <a href="index.html #projects"><li><button class="btn">Projects</button></li></a>
+            <a href="index.html #services"><li><button class="btn">Services</button></li></a>
+            <a href="#"><li><button class="btn" id="hamburger"><i class="fa fa-bars"></i></button></li></a>
+        </ul>
+        </div>
+    </div>
+</nav>
+<section class="contact">
+    <a href="index.html">
+        <button class="btn"><i class="fa fa-home"></i> Return home</button>
+    </a>
+</section>
+
+<!-- minesweeper game -->
+    <div class="grid"></div>
+
+</body>
+</html>

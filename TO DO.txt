@@ -1,9 +1,7 @@
 Portfolio to-do list:
 
-- Fix light mode fade-in on non-"home" sections
-- Add an image to the right of the paragraph text in the About section
 - Add fontawesome "sun" and "moon" icon onto the dark mode slider
 - Fix "Web Developer" in the title not being affected by its "flavor" class
 - Make the website remember your dark/light mode preference
-- Make the navigation href things take into consideration the height of the nav bar
---
+- Make website more responsive as to work on mobile devices
+- Fix the big buttons under "Projects" not being centered on the page (and make them collapse into a 2x2 on mobile)
