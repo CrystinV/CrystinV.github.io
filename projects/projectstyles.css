@@ -1,20 +1,99 @@
 /* MINESWEEPER */
+.container {
+    align-content: center;
+    margin: 0 auto;
+}
+
 .grid {
-    width: 70vh;
-    height: 70vh;
     display: flex;
     flex-wrap: wrap;
-    background-color: rgba(15, 141, 141, 0.5);
-    position: absolute;
-    top: 15vh;
+    height: 60vh;
+    width: 60vh;
+    max-width: 100vw;
+    background-color: #16a3a3;
+    border: 0.6vh solid #067070;
+    margin-top: 16vh;
 }
-
+  
 .grid div {
-    height: 7vh;
-    width: 7vh;
-    color: white;
-}
+    font-size: 4vh;
+    text-align: center;
+    cursor: default;
+  }
+  .valid {
+    height: 6vh;
+    width: 6vh;
+    border: 5px solid;
+    border-color: #00fff2 #0f8d8d #0f8d8d #00fff2;
+    box-sizing: border-box;
+  }
+  
+  .checked {
+    height: 6vh;
+    width: 6vh;
+    border: 2px solid;
+    background-color: #067070;
+    border-color: #0f8d8d #00fff2 #00fff2 #0f8d8d;
+    box-sizing: border-box;
+    text-shadow: 2px 2px 1px #182028;
+  }
+  
+  .bomb {
+    height: 6vh;
+    width: 6vh;
+    border: 5px solid;
+    border-color: #00fff2 #0f8d8d #0f8d8d #00fff2;
+    box-sizing: border-box;
+    color: black;
+    text-shadow: 2px 2px 4px #182028;
+  }
+  
+  .flag {
+      color: red;
+      text-shadow: 2px 2px 1px #182028;
+  }
 
-.checked {
-    background-color: darkslategray;
-}
+/* number colors */
+  .one {
+      color: deepskyblue;
+  }
+  .two {
+      color: lightgreen;
+  }
+  .three {
+      color: lightcoral;
+  }
+  .four {
+      color: slateblue;
+  }
+  .five {
+      color: firebrick;
+  }
+  .six {
+      color: turquoise;
+  }
+  .seven {
+      color: darkslategray;
+  }
+  .eight {
+      color: gray;
+  }
+  
+  .container #result {
+    color: red;
+    position: absolute;
+    margin-top: 10vh;
+    text-align: center;
+    font-size: 200%;
+    width: 61vh;
+  }
+
+  .container .btn {
+    padding: 1%;
+    margin: 1%;
+    border: #16a3a3 1em;
+    border-radius: 2em;
+    font-style: normal;
+    font-size: 150%;
+    float: right;
+  }

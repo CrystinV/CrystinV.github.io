@@ -1,13 +1,16 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const grid = document.querySelector('.grid')
-    let width = 10
-    let squares = []
-    let bombAmount = 20
-    let flags = 0
-    let isGameOver = false
+  const grid = document.querySelector('.grid')
+  const flagsLeft = document.querySelector('#flags-left')
+  const result = document.querySelector('#result')
+  let width = 10
+  let bombAmount = 10
+  let flags = 0
+  let squares = []
+  let isGameOver = false
 
     // load board
     function loadBoard() {
+      flagsLeft.innerHTML = bombAmount
 
     // randomly generate bombs
         const bombsArray = Array(bombAmount).fill ('bomb')
@@ -62,7 +65,7 @@ loadBoard()
         square.classList.add('flag')
         square.innerHTML = '<i class="fa fa-flag"></i>'
         flags ++
-        flagsLeft.innerHTML = bombAmount- flags
+        flagsLeft.innerHTML = bombAmount - flags
         checkForWin()
       } else {
         square.classList.remove('flag')
@@ -84,6 +87,14 @@ function click(square) {
         let total = square.getAttribute('data')
         if (total !=0) {
             square.classList.add('checked')
+            if (total == 1) square.classList.add('one')
+            if (total == 2) square.classList.add('two')
+            if (total == 3) square.classList.add('three')
+            if (total == 4) square.classList.add('four')
+            if (total == 5) square.classList.add('five')
+            if (total == 6) square.classList.add('six')
+            if (total == 7) square.classList.add('seven')
+            if (total == 8) square.classList.add('eight')
             square.innerHTML = total
             return
         }
@@ -91,6 +102,8 @@ function click(square) {
     }
     square.classList.add('checked')
 }
+
+
 
 // check neighboring squares
   function checkSquare(square, currentId) {
@@ -143,7 +156,7 @@ function click(square) {
 
   //game over
   function gameOver(square) {
-      console.log('Game over.')
+      result.innerHTML = 'GAME OVER'
       isGameOver = true
 
       //reveal bombs
@@ -153,17 +166,20 @@ function click(square) {
           }
       })
   }
-})
 
 //check for win
 function checkForWin() {
+
+  let matches = 0
+
     for (let i = 0; i < squares.length; i++) {
-        if (squares[i].classList.contains('flag') && squares[i].classList.contains('bomb')) {
-            matches ++
-        }
-        if (matches === bombAmount) {
-            console.log('Congratulations!')
-            isGameOver = true
-        }
+      if (squares[i].classList.contains('flag') && squares[i].classList.contains('bomb')) {
+        matches ++
+      }
+      if (matches === bombAmount) {
+        result.innerHTML = 'YOU WIN!'
+        isGameOver = true
+      }
     }
-}
+  }
+})
