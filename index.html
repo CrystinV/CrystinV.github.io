@@ -26,11 +26,7 @@
     </head>
 
     <body>
-        <!-- dark mode switch -->
-        <label class="darkmode-switch">
-            <input type="checkbox" onclick="toggleDark()">
-            <span class="slider round"></span>
-        </label>
+
         <!-- navigation bar -->
         <nav class="navbar">
             <div class="max-width">
@@ -48,11 +44,6 @@
                 </div>
             </div>
         </nav>
-            <!-- contact button -->
-                <a href="contact.html" class="contact email">
-                    <button class="btn"><i class="fa fa-envelope"></i> Contact me</button>
-                </a>
-
             <!-- home section -->
             <section class="home" id="home">
                 <div class="max-width">
@@ -74,9 +65,9 @@
                         <p class="right-column">                            
                             My name is Crystin,<br><br>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consequatur sint architecto, modi, neque nesciunt dolore et ullam vero nostrum ad, expedita commodi corrupti quis. Expedita ratione facilis inventore deserunt porro.
                         </p>
-                        <!-- <a href="https://www.linkedin.com/in/crystin-vazquez-536359220/" class="right-column">
+                        <a href="https://www.linkedin.com/in/crystin-vazquez-536359220/" class="right-column" id="github-btn">
                             <button class="btn persistent"><i class="fa fa-linkedin"></i> My LinkedIn</button>
-                        </a> commented out until I can fix the button not appearing below the paragraph like it should -->
+                        </a>
                         </div>
                     </div>
                 </div>
@@ -91,7 +82,7 @@
                             <br>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officia tempora reprehenderit, saepe aut obcaecati id porro veritatis inventore dolorum? Illum perferendis earum accusantium explicabo magni sunt optio dolores, vitae veritatis.
                         </p><br>
                         <a href="https://github.com/CrystinV">
-                            <button class="btn persistent"><i class="fa fa-github"></i> My Github</button>
+                            <button class="btn persistent"><i class="fa fa-linkedin"></i> My LinkedIn</button>
                         </a>
                     </div>
                     <div class="right-column">
@@ -122,8 +113,8 @@
                 </div>
                 <div class="project-display">
                     <a href="minesweeper.html"><button class="large-btn" id="project1"><label>Minesweeper<br><span>(JavaScript)</span></label><br><img src="media/project_minesweeper.png"></button></a>
-                    <a><button class="large-btn" id="project2"><label>Tiktok App<br><span>(React, Database)</span></label><br><img src="media/project_tiktok.png"></button></a>
-                    <a><button class="large-btn" id="project3"><label>Unknown<br><span>?</span></label><br><img src="media/project_unspecified.jpg"></button></a>
+                    <a><button class="large-btn" id="project2"><label>TikTok Clone<br><span>(React, Database)</span></label><br><img src="media/project_tiktok.png"></button></a>
+                    <a><button class="large-btn" id="project3"><label>Breakout<br><span>(JavaScript)</span></label><br><img src="media/project_breakout.png"></button></a>
                     <a><button class="large-btn" id="project4"><label>Unknown<br><span>?</span></label><br><img src="media/project_unspecified.jpg"></button></a>
                 </div>
             </section> <br><hr>
@@ -149,11 +140,27 @@
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias praesentium, ipsum consequuntur repudiandae fugit doloremque voluptas quam nemo perspiciatis veritatis distinctio eius sunt nulla iste quod vero, cupiditate, laborum aliquam.
                     </p></button></a>
                 </div>
+        <!-- dark mode switch -->
+        <label class="darkmode-switch footer-float">
+            <input type="checkbox" onclick="toggleDark()">
+            <span class="slider round"></span>
+        </label>
+        <!-- contact button -->
+        <a href="contact.html" class="contact email footer-float">
+            <button class="btn"><i class="fa fa-envelope"></i> Contact me</button>
+        </a>
             </section>
 
             <!-- footer -->
-            <footer>
-
+            <footer id="footer">
+                </div>
+                <ul class="menu">
+                    <a href=""><li><button class="btn"><i class="fa fa-github"></i></button></li></a>
+                    <a href=""><li><button class="btn"><i class="fa fa-linkedin"></i></button></li></a>
+                    <a href=""><li><button class="btn"><i class="fa fa-twitter"></i></button></li></a>
+                    <a href=""><li><button class="btn"><i class="fa fa-envelope"></i></button></li></a>
+                </ul>
+                </div>
             </footer>
     </body>
 </html>

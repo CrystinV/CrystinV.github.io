@@ -314,13 +314,13 @@ section {
     margin-top: 60%;
     float: left;
 }
-#about button{
+#about .btn {
     border: 1em #16a3a3;
     border-radius: 2em;
     font-size: 80%;
-    padding: 0.5em;
-    margin: 0.25em;
+    margin-left: 30vw;
     width: fit-content;
+    display: none; /* HIDING UNTIL FIXED */
 }
 
 /* SKILLS */
@@ -378,7 +378,7 @@ section {
 /* PROJECTS */
 .project-display {
     position: absolute;
-    padding-top: 5vw;
+    padding-top: 4em;
     width: 100vw;
     justify-items: center;
     text-align: center;
@@ -408,8 +408,7 @@ section {
 
 /* SERVICES */
 #services {
-    height: 120vh;
-    background: linear-gradient( rgba(0,0,0,0) 80%, rgba(22, 163, 163, 0.8));
+    height: 80vh;
 }
 .services-display {
     position: absolute;
@@ -457,9 +456,21 @@ section {
 
 
 /* FOOTER */
-footer {
+#footer {
     background-color: #16a3a3;
+    width: 100%;
+    justify-items: center;
+    text-align: center;
+    margin: auto;
 }
+#footer li {
+    position: relative;
+    list-style: none;
+    display: inline-block;
+    font-size: 175%;
+    min-width: none;
+}
+
 
 /* DARK MODE */
 .dark-mode {
