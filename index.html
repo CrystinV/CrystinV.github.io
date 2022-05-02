@@ -10,6 +10,9 @@
         <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
         <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
         <script src="script.js"></script>
+        <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+
         <!-- hide extra elements on small devices -->
         <style>
         @media (min-width: 100px) {
@@ -31,7 +34,7 @@
         <nav class="navbar">
             <div class="max-width">
                 <div class="logo">
-                    <h4>Portfolio</h4>
+                    <h4>Crystin's Portfolio</h4>
                 </div>
                 <ul class="menu">
                     <a href="index.html"><li><button class="btn">Home</button></li></a>
@@ -56,100 +59,94 @@
             </section> <br><hr>
             
             <!-- about section -->
-            <section class="content" id="about">
-                <div>
-                    <h1 class="title flavor">About me<br></h1>   
-                    <div>
-                        <div style="height: 300px; width: 300px; object-fit: cover; position: absolute; vertical-align: center;">
-                            <img src="media/profilephoto.jpg" alt="Profile photo" class="left-column">
-                        <p class="right-column">                            
-                            My name is Crystin,<br><br>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consequatur sint architecto, modi, neque nesciunt dolore et ullam vero nostrum ad, expedita commodi corrupti quis. Expedita ratione facilis inventore deserunt porro.
-                        </p>
-                        <a href="https://www.linkedin.com/in/crystin-vazquez-536359220/" class="right-column" id="github-btn">
-                            <button class="btn persistent"><i class="fa fa-linkedin"></i> My LinkedIn</button>
-                        </a>
-                        </div>
-                    </div>
-                </div>
-            </section> <br><hr>
+            <div class="content" id="about">
+                <h1 class="title flavor">About me<br></h1>
+                <img src="media/profilephoto.jpg" alt="Profile photo" class="left-column">
+                <p class="right-column">
+                    My name is Crystin,<br><br>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consequatur sint architecto, modi, neque nesciunt dolore et ullam vero nostrum ad, expedita commodi corrupti quis. Expedita ratione facilis inventore deserunt porro.
+                    <a href="https://docs.google.com/document/d/19NDFOjvzm1kHRiy2AQELoNDpFJlWVF1R--UstDE1opY/edit?usp=sharing" class="right-column">
+                        <button class="btn persistent"><i class="fa fa-file"></i> My Résumé</button>
+                    </a>
+                </p>
+            </div> <br><hr>
 
             <!-- skills section -->
-            <section class="content" id="skills">
-                    <h1 class="title flavor">My Skills</h1>
-                    <div class="left-column">
-                        <h2>My skills and experience</h2>
-                        <p>
-                            <br>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officia tempora reprehenderit, saepe aut obcaecati id porro veritatis inventore dolorum? Illum perferendis earum accusantium explicabo magni sunt optio dolores, vitae veritatis.
-                        </p><br>
-                        <a href="https://github.com/CrystinV">
-                            <button class="btn persistent"><i class="fa fa-linkedin"></i> My LinkedIn</button>
-                        </a>
-                    </div>
-                    <div class="right-column">
-                        <div class="bars">
-                            <div class="info">
-                                <span>HTML</span>
-                                <span>90%</span>
-                            </div>
-                            <div class="line html"></div>
-                            <div class="info">
-                                <span>CSS</span>
-                                <span>70%</span>
-                            </div>
-                            <div class="line css"></div>
-                            <div class="info">
-                                <span>JavaScript</span>
-                                <span>40%</span>
-                            </div>
-                            <div class="line javascript"></div>
-                        </div>
-                    </div>
-            </section> <br><hr>
+            <div class="content" id="skills">
+                <h1 class="title flavor">My Skills</h1>
+                <h2>My skills and experience</h2>
+                <p>
+                <br>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officia tempora reprehenderit, saepe aut obcaecati id porro veritatis inventore dolorum? Illum perferendis earum accusantium explicabo magni sunt optio dolores, vitae veritatis.
+                <br><a href="https://github.com/CrystinV"><button class="btn persistent"><i class="fa fa-linkedin"></i> My LinkedIn</button></a>
+                </p>
+                
+                <canvas id="myChart" style="width:100%;width:40vw;max-width:100vh;"></canvas>
+                    <script>
+                    var xValues = ["HTML", "CSS", "JavaScript", "PHP"];
+                    var yValues = [35, 35, 19, 1];
+                    var barColors = [
+                    "slateblue",
+                    "forestgreen",
+                    "crimson",
+                    "indigo"
+                    ];
+
+                    new Chart("myChart", {
+                    type: "pie",
+                    data: {
+                        labels: xValues,
+                        datasets: [{
+                        backgroundColor: barColors,
+                        data: yValues
+                        }]
+                    },
+                    options: {
+                        title: {
+                        display: true,
+                        text: "What do I know best? (in percentages)"
+                        }
+                    }
+                    });
+                    </script>
+            </div><br><hr>
 
             <!-- projects section -->
-            <section class="content" id="projects">
-                <div>
-                    <h1 class="title flavor">My Latest Projects</h1>
-                </div>
-                <div class="project-display">
-                    <a href="minesweeper.html"><button class="large-btn" id="project1"><label>Minesweeper<br><span>(JavaScript)</span></label><br><img src="media/project_minesweeper.png"></button></a>
-                    <a><button class="large-btn" id="project2"><label>TikTok Clone<br><span>(React, Database)</span></label><br><img src="media/project_tiktok.png"></button></a>
-                    <a><button class="large-btn" id="project3"><label>Breakout<br><span>(JavaScript)</span></label><br><img src="media/project_breakout.png"></button></a>
-                    <a><button class="large-btn" id="project4"><label>Unknown<br><span>?</span></label><br><img src="media/project_unspecified.jpg"></button></a>
-                </div>
-            </section> <br><hr>
+            <div class="content project-display" id="projects">
+                <h1 class="title flavor">My Latest Projects</h1>
+                <a href="minesweeper.html"><button class="large-btn" id="project1"><label>Minesweeper<br><span>(JavaScript)</span></label><br><img src="media/project_minesweeper.png" alt="Minesweeper icon"></button></a>
+                <a><button class="large-btn" id="project2"><label>TikTok Clone<br><span>(React, Database)</span></label><br><img src="media/project_tiktok.png" alt="TikTok icon"></button></a>
+                <a><button class="large-btn" id="project3"><label>Breakout<br><span>(JavaScript)</span></label><br><img src="media/project_breakout.png" alt="Breakout icon"></button></a>
+                <a><button class="large-btn" id="project4"><label>Unknown<br><span>?</span></label><br><img src="media/project_unspecified.jpg" alt="Question mark icon"></button></a>
+            </div><br><hr>
 
             <!-- services section -->
-            <section class="content" id="services">
-                <div>
-                    <h1 class="title flavor">My Services</h1>
-                </div>
-                <div class="services-display">
-                    <a><button class="large-btn"><label><span><i class="fa fa-code"></i></span><br>Web Development</label><br><br>
-                        <p id="services1">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias praesentium, ipsum consequuntur repudiandae fugit doloremque voluptas quam nemo perspiciatis veritatis distinctio eius sunt nulla iste quod vero, cupiditate, laborum aliquam.
-                    </p></button></a>
+        <div class="content services-display" id="services">
+            <h1 class="title flavor">What I can do</h1>
 
-                    <a><button class="large-btn"><label><span><i class="fa fa-desktop"></i></span><br>Graphic Design</label><br><br>
-                        <p id="services2">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias praesentium, ipsum consequuntur repudiandae fugit doloremque voluptas quam nemo perspiciatis veritatis distinctio eius sunt nulla iste quod vero, cupiditate, laborum aliquam.
-                    </p></button></a>
+            <a><button class="large-btn"><label><span><i class="fa fa-code"></i></span><br>Web Development</label><br><br>
+                <p id="services1">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias praesentium, ipsum consequuntur repudiandae fugit doloremque voluptas quam nemo perspiciatis veritatis distinctio eius sunt nulla iste quod vero, cupiditate, laborum aliquam.
+            </p></button></a>
 
-                    <a><button class="large-btn"><label><span><i class="fa fa-server"></i></span><br>Database Management</label><br><br>
-                        <p id="services3">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias praesentium, ipsum consequuntur repudiandae fugit doloremque voluptas quam nemo perspiciatis veritatis distinctio eius sunt nulla iste quod vero, cupiditate, laborum aliquam.
-                    </p></button></a>
-                </div>
-        <!-- dark mode switch -->
-        <label class="darkmode-switch footer-float">
-            <input type="checkbox" onclick="toggleDark()">
-            <span class="slider round"></span>
-        </label>
-        <!-- contact button -->
-        <a href="contact.html" class="contact email footer-float">
-            <button class="btn"><i class="fa fa-envelope"></i> Contact me</button>
-        </a>
-            </section>
+            <a><button class="large-btn"><label><span><i class="fa fa-desktop"></i></span><br>Graphic Design</label><br><br>
+                <p id="services2">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias praesentium, ipsum consequuntur repudiandae fugit doloremque voluptas quam nemo perspiciatis veritatis distinctio eius sunt nulla iste quod vero, cupiditate, laborum aliquam.
+            </p></button></a>
+
+            <a><button class="large-btn"><label><span><i class="fa fa-server"></i></span><br>Database Management</label><br><br>
+                <p id="services3">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias praesentium, ipsum consequuntur repudiandae fugit doloremque voluptas quam nemo perspiciatis veritatis distinctio eius sunt nulla iste quod vero, cupiditate, laborum aliquam.
+            </p></button></a>
+        </div>
+
+            <!-- dark mode switch -->
+            <label class="darkmode-switch footer-float">
+                <input type="checkbox" onclick="toggleDark()">
+                <span class="slider round"></span>
+            </label>
+            <!-- contact button -->
+            <a href="contact.html" class="contact email footer-float">
+                <button class="btn"><i class="fa fa-envelope"></i> Contact me</button>
+            </a>
 
             <!-- footer -->
             <footer id="footer">
