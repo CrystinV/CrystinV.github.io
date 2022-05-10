@@ -334,6 +334,29 @@ hr {
     border-radius: 0.5em;
 }
 
+/* CERTIFICATE GALLERY */
+.certificates {
+    text-align: center;
+}
+
+.certificates li {
+    list-style: none;
+    display: inline-block;
+}
+
+.certificates img {
+    height: 8em;
+    width: auto;
+    margin: 0.2em;
+    -webkit-transition: .1s;
+    transition: .1s;
+}
+.certificates img:hover {
+    height: 7.9em;
+    -webkit-transition: .1s;
+    transition: .1s;
+}
+
 /* PROJECTS */
 .project-display {
     width: 100vw;
@@ -351,9 +374,14 @@ hr {
     padding: 0.2em 0.2em 0.2em 0.2em;
     margin: 3em 1% 1% 1%;
     top: 10em;
+    -webkit-transition: .1s;
+    transition: .1s;
 }
 .project-display button:hover {
     background-color: #0f8d8d;
+    font-size: 98%;
+    -webkit-transition: .1s;
+    transition: .1s;
 }
 .project-display button label {
     cursor: pointer;
@@ -377,9 +405,14 @@ hr {
     margin: 1em 1% 1% 1%;
     background-color: #16a3a3;
     width: 12em;
+    -webkit-transition: .1s;
+    transition: .1s;
 }
 .services-display button:hover {
     background-color: #0f8d8d;
+    font-size: 98%;
+    -webkit-transition: .1s;
+    transition: .1s;
 }
 .services-display button label {
     cursor: pointer;
