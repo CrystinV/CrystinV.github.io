@@ -130,7 +130,7 @@ input:checked + .slider:before {
 
         /* hide extra navigation buttons */
 @media (max-aspect-ratio: 4/3) {
-    .btn:not(#hamburger, .persistent) {
+    .btn:not(.persistent) {
         display: none;
     }
     .navbar {
@@ -146,7 +146,7 @@ input:checked + .slider:before {
     }
 }
 @media (min-aspect-ratio: 4/3) {
-    .btn:not(#hamburger) {
+    .btn:not(.persistent) {
         display: block;
     }
     .navbar {
@@ -445,7 +445,6 @@ hr {
 #footer {
     background-color: #16a3a3;
     width: 100%;
-    justify-items: center;
     text-align: center;
     margin: auto;
     position: absolute;
