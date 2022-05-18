@@ -15,12 +15,12 @@
 
         <!-- hide extra elements on small devices -->
         <style>
-        @media (min-width: 100px) {
+        @media (max-aspect-ratio: 4/3) {
             .logo {
                 display: none;
             }
         }
-        @media (min-width: 1292px){
+        @media (min-aspect-ratio: 4/3) {
             .logo {
                 display: block;
             }
@@ -38,10 +38,10 @@
                 </div>
                 <ul class="menu">
                     <a href="index.html"><li><button class="btn">Home</button></li></a>
-                    <a href="#about"><li><button class="btn">About</button></li></a>
-                    <a href="#skills"><li><button class="btn">Skills</button></li></a>
-                    <a href="#projects"><li><button class="btn">Projects</button></li></a>
-                    <a href="#services"><li><button class="btn">Services</button></li></a>
+                    <a href="#about-scroll"><li><button class="btn">About</button></li></a>
+                    <a href="#skills-scroll"><li><button class="btn">Skills</button></li></a>
+                    <a href="#projects-scroll"><li><button class="btn">Projects</button></li></a>
+                    <a href="#services-scroll"><li><button class="btn">Abilities</button></li></a>
                     <a href="#"><li><button class="btn" id="hamburger"><i class="fa fa-bars"></i></button></li></a>
                 </ul>
                 </div>
@@ -56,34 +56,35 @@
                         <div class="text-3">I am a <span class="flavor">Web Developer</span></div>
                     </div>
                 </div>
-            </section> <br><hr>
+            </section> <br><hr id="about-scroll">
             
             <!-- about section -->
             <div class="content" id="about">
                 <h1 class="title flavor">About me<br></h1>
                 <img src="media/profilephoto.jpg" alt="Profile photo" class="left-column">
                 <p class="right-column">
-                    My name is Crystin,<br><br>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consequatur sint architecto, modi, neque nesciunt dolore et ullam vero nostrum ad, expedita commodi corrupti quis. Expedita ratione facilis inventore deserunt porro.
+                    
+                    My name is Crystin,<br><br>I'm a soon-to-graduate college student living in the southwest Florida area.
                     <a href="https://docs.google.com/document/d/19NDFOjvzm1kHRiy2AQELoNDpFJlWVF1R--UstDE1opY/edit?usp=sharing" class="right-column">
                         <button class="btn persistent"><i class="fa fa-file"></i> My Résumé</button>
                     </a>
                 </p>
-            </div> <br><hr>
+            </div> <br><hr id="skills-scroll">
 
             <!-- skills section -->
             <div class="content" id="skills">
                 <h1 class="title flavor">My Skills</h1>
                 <h2>My skills and experience</h2>
                 <p>
-                <br>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officia tempora reprehenderit, saepe aut obcaecati id porro veritatis inventore dolorum? Illum perferendis earum accusantium explicabo magni sunt optio dolores, vitae veritatis.
-                <br><a href="https://github.com/CrystinV"><button class="btn persistent"><i class="fa fa-linkedin"></i> My LinkedIn</button></a>
+                    <br>I've been learning programming both self-taught and professionally for the past few years in languages including HTML, CSS3, and JavaScript.
+                    <br><a href="https://github.com/CrystinV"><button class="btn persistent"><i class="fa fa-linkedin"></i> My LinkedIn</button></a>
                 </p>
-
+                
                 <h3 style="text-align:center;margin-bottom:-1.5em;">What do I know best?</h3>
                 <canvas id="myChart" style="width:100%;width:40vw;max-width:100vh;"></canvas>
                     <script>
                     var xValues = ["HTML", "CSS", "JavaScript", "PHP"];
-                    var yValues = [35, 35, 19, 1];
+                    var yValues = [33, 33, 15, 8];
                     var barColors = [
                     "slateblue",
                     "forestgreen",
@@ -120,35 +121,35 @@
                         <li><a href="#"><img src="media/certificate_uidesigner.png" alt="User Interface Designer certificate" class="certificate"></a></li>
                     </ul>
 
-            </div><br><hr>
+            </div><br><hr id="projects-scroll">
 
             <!-- projects section -->
             <div class="content project-display" id="projects">
                 <h1 class="title flavor">My Latest Projects</h1>
-                <a href="minesweeper.html"><button class="large-btn" id="project1"><label>Minesweeper<br><span>(JavaScript)</span></label><br><img src="media/project_minesweeper.png" alt="Minesweeper icon"></button></a>
-                <a><button class="large-btn" id="project2"><label>TikTok Clone<br><span>(React, Database)</span></label><br><img src="media/project_tiktok.png" alt="TikTok icon"></button></a>
-                <a><button class="large-btn" id="project3"><label>Breakout<br><span>(JavaScript)</span></label><br><img src="media/project_breakout.png" alt="Breakout icon"></button></a>
-                <a><button class="large-btn" id="project4"><label>Unknown<br><span>?</span></label><br><img src="media/project_unspecified.jpg" alt="Question mark icon"></button></a>
-            </div><br><hr>
+                <a href="minesweeper.html"><button class="large-btn" id="project1"><label>Minesweeper<br><br><span>(JavaScript)</span></label><br><img src="media/project_minesweeper.png" alt="Minesweeper icon"></button></a>
+                <a><button class="large-btn" id="project2"><label>TikTok Clone<br>(WIP)<br><span>(React, Database)</span></label><br><img src="media/project_tiktok.png" alt="TikTok icon"></button></a>
+                <a><button class="large-btn" id="project3"><label>Breakout<br>(WIP)<br><span>(JavaScript)</span></label><br><img src="media/project_breakout.png" alt="Breakout icon"></button></a>
+                <a><button class="large-btn" id="project4"><label>Ecommerce Site<br>(WIP)<br><span>?</span></label><br><img src="media/project_unspecified.jpg" alt="Question mark icon"></button></a>
+            </div><br><hr id="services-scroll">
 
             <!-- services section -->
         <div class="content services-display" id="services">
             <h1 class="title flavor">What I can do</h1>
 
-            <a><button class="large-btn"><label><span><i class="fa fa-code"></i></span><br>Web Development</label><br><br>
+            <a><button class="large-btn"><label><span><i class="fa fa-code"></i></span><br>Site Development</label><br><br>
                 <p id="services1">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias praesentium, ipsum consequuntur repudiandae fugit doloremque voluptas quam nemo perspiciatis veritatis distinctio eius sunt nulla iste quod vero, cupiditate, laborum aliquam.
-            </p></button></a>
+                    Whether I'm programming a Website from scratch or maintaining an already existing site, I can help make a site fully functional and responsive.<br><br>I'm able to work with HTML, CSS, JavaScript, PHP, Wordpress, and more!
+                </p></button></a>
 
-            <a><button class="large-btn"><label><span><i class="fa fa-desktop"></i></span><br>Graphic Design</label><br><br>
+            <a><button class="large-btn"><label><span><i class="fa fa-desktop"></i></span><br>Image Manipulation</label><br><br>
                 <p id="services2">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias praesentium, ipsum consequuntur repudiandae fugit doloremque voluptas quam nemo perspiciatis veritatis distinctio eius sunt nulla iste quod vero, cupiditate, laborum aliquam.
-            </p></button></a>
+                    If ever needed, I can remove a background, create vectors, do touch-ups, and more!<br><br>My programs of choice are Adobe Photoshop, GIMP, Paint.net, and Adobe Illustrator.
+                </p></button></a>
 
             <a><button class="large-btn"><label><span><i class="fa fa-server"></i></span><br>Database Management</label><br><br>
                 <p id="services3">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias praesentium, ipsum consequuntur repudiandae fugit doloremque voluptas quam nemo perspiciatis veritatis distinctio eius sunt nulla iste quod vero, cupiditate, laborum aliquam.
-            </p></button></a>
+                    
+                </p></button></a>
         </div>
 
             <!-- dark mode switch -->
