@@ -293,15 +293,13 @@ hr {
 #about p {
     padding-top: 0;
     vertical-align: middle;
-    margin-bottom: 10%;
+    margin-bottom: 8em;
 }
 #about img {
     max-width: 400px;
-    transform: translate(0, -50%);
     position: absolute;
     width: 40vw;
     vertical-align: middle;
-    margin-top: 8em;
 }
 #about button {
     border: 1em #16a3a3;

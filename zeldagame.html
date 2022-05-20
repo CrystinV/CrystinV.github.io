@@ -5,12 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="projects/minesweeper.css">
-    <title>Project - Minesweeper</title>
+    <link rel="stylesheet" href="projects/projectstyles.css">
+    <title>Project - Zelda Clone</title>
     <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="script.js"></script>
-    <script src="projects/minesweeper.js"></script>
 </head>
 <body class="home">
     
@@ -26,13 +25,17 @@
     </a>
 </section>
 
-<!-- minesweeper game -->
-<div class="container">
-    <div id="result"></div>
-    <div class="grid"></div>
-    <span style="font-size: 150%; margin: 2%;">Flags left: <span id='flags-left'></span></span>
-    <a href="minesweeper.html"><button class="btn persistent"><i class="fa fa-rotate-left"></i> Reset</button></a>
-</div>
+<!-- zelda game -->
+<style>
+    #gamewindow {
+        align-content: center;
+        overflow: hidden;
+    }
+</style>
+    <div id="gamewindow">
+        <script src="https://kaboomjs.com/lib/0.5.0/kaboom.js"></script>
+        <script src="projects/zeldagame.js"></script>
+    </div>
 
 </body>
 </html>
