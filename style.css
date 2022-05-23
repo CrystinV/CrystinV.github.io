@@ -406,16 +406,9 @@ hr {
     margin: 1em 1% 1% 1%;
     background-color: #16a3a3;
     width: 12em;
-    -webkit-transition: .1s;
-    transition: .1s;
-}
-.services-display button:hover {
-    background-color: #0f8d8d;
-    -webkit-transition: .1s;
-    transition: .1s;
+    cursor: default;
 }
 .services-display button label {
-    cursor: pointer;
     text-shadow: 2px 2px #182028;
 }
 .services-display button span {
@@ -427,6 +420,7 @@ hr {
     background-color: #096777;
     text-align: left;
     padding: 5%;
+    height: 10em;
 }
 
     /* large button base */
